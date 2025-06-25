@@ -12,25 +12,6 @@
     <p>Servicio de uñas en domicilio particular (con cita previa)</p>
   </header>
 
-  <section id="servicios">
-    <h2>Servicios y Precios</h2>
-    <h3>💅 Uñas</h3>
-    <ul>
-      <li>Manicura básica - 15 €</li>
-      <li>Manicura francesa - 20 €</li>
-      <li>Uñas acrílicas - 30 €</li>
-      <li>Decoración personalizada - 10 € extra</li>
-    </ul>
-
-    <h3>👁️ Pestañas y Cejas</h3>
-    <ul>
-      <li>Extensión de pestañas clásicas - 25 €</li>
-      <li>Lifting de pestañas - 20 €</li>
-      <li>Diseño de cejas con hilo - 10 €</li>
-      <li>Coloración de cejas - 8 €</li>
-    </ul>
-  </section>
-
   <section id="galeria">
     <h2>Galería</h2>
     <div class="imagenes">
@@ -48,49 +29,88 @@
   <section id="ficha-cliente">
   <h2>Ficha Técnica del Cliente</h2>
   <form class="ficha-form">
-    <label>Nombre:</label>
-    <input type="text" name="nombre" placeholder="Nombre completo" required />
 
-    <label>Día y hora de cita:</label>
-    <input type="datetime-local" name="fecha" required />
+    <!-- DATOS DEL CLIENTE -->
+    <div class="ficha-section">
+      <label>Nombre:</label>
+      <input type="text" name="nombre" placeholder="Nombre completo" required />
 
-    <h3>🧴 Servicio a realizar</h3>
+      <label>Día y hora de cita:</label>
+      <input type="datetime-local" name="fecha" required />
+    </div>
 
-    <label><input type="checkbox" name="servicio" /> Semipermanente con refuerzo</label>
-    <label><input type="checkbox" name="servicio" /> Semipermanente normal</label>
-    <label><input type="checkbox" name="servicio" /> Uñas de gel esculpidas</label>
+    <!-- UÑAS -->
+    <div class="ficha-section">
+      <h3>💅 Servicios de Uñas</h3>
 
-    <p>Tamaño:</p>
-    <label><input type="checkbox" name="tamano" /> Grande</label>
-    <label><input type="checkbox" name="tamano" /> Mediano</label>
-    <label><input type="checkbox" name="tamano" /> Pequeño</label>
+      <p><strong>Uñas de gel esculpidas</strong></p>
+      <label><input type="checkbox" name="unas-gel" /> Pequeño (15€)</label>
+      <label><input type="checkbox" name="unas-gel" /> Mediano (20€)</label>
+      <label><input type="checkbox" name="unas-gel" /> Grande (25€)</label>
 
-    <label><input type="checkbox" name="servicio" /> Pedicura Spa SIN esmaltado</label>
-    <label><input type="checkbox" name="servicio" /> Pedicura Spa CON esmaltado</label>
-    <label><input type="checkbox" name="servicio" /> Retiro semipermanente</label>
-    <label><input type="checkbox" name="servicio" /> Retiro gel</label>
+      <p>Extras:</p>
+      <label><input type="checkbox" name="decoracion-gel" /> Decoración (+2€)</label>
+      <label><input type="checkbox" name="dibujo-gel" /> Dibujo o Francesa (+4€)</label>
 
-    <h3>✨ Decoración</h3>
-    <label><input type="checkbox" name="decoracion" /> Diamantes</label>
-    <label><input type="checkbox" name="decoracion" /> Francesita</label>
-    <label><input type="checkbox" name="decoracion" /> Efectos</label>
-    <label><input type="checkbox" name="decoracion" /> Dibujo</label>
+      <p>Adicionales:</p>
+      <label><input type="checkbox" name="relleno-gel" /> Relleno (13€)</label>
+      <label><input type="checkbox" name="retirado-gel" /> Retirado completo (5€)</label>
+      <label><input type="checkbox" name="retirado-diseno-gel" /> Retirado de diseño (3€)</label>
+      <label><input type="checkbox" name="restauracion-gel" /> Restauración uña partida/caída (1€)</label>
+      <label><input type="checkbox" name="limpieza-gel" /> Limpieza de uñas naturales (5€)</label>
 
-    <h3>👁️ Extensión de pestañas</h3>
-    <label><input type="checkbox" name="pestanas" /> Clásicas</label>
-    <label><input type="checkbox" name="pestanas" /> Volumen ruso</label>
-    <label><input type="checkbox" name="pestanas" /> Extensión diferente incluida</label>
+      <hr />
 
-    <h3>💳 Pago</h3>
-    <label><input type="checkbox" name="pago" /> Efectivo</label>
-    <label><input type="checkbox" name="pago" /> Bizum</label>
+      <p><strong>Semipermanente con refuerzo (12,50€)</strong></p>
+      <label><input type="checkbox" name="semipermanente" /> Servicio</label>
 
-    <label>Otra información:</label>
-    <textarea rows="4" name="info-extra" placeholder="Notas adicionales del cliente..."></textarea>
+      <p>Extras:</p>
+      <label><input type="checkbox" name="decoracion-semi" /> Decoración (+2€)</label>
+      <label><input type="checkbox" name="dibujo-semi" /> Dibujo o Francesa (+4€)</label>
+
+      <p>Adicionales:</p>
+      <label><input type="checkbox" name="relleno-semi" /> Relleno (8€)</label>
+      <label><input type="checkbox" name="retirado-semi" /> Retirado completo (3€)</label>
+      <label><input type="checkbox" name="retirado-diseno-semi" /> Retirado de diseño (3€)</label>
+      <label><input type="checkbox" name="restauracion-semi" /> Restauración uña partida/caída (1€)</label>
+    </div>
+
+    <!-- PEDICURA -->
+    <div class="ficha-section">
+      <h3>🦶 Pedicura Spa</h3>
+      <label><input type="checkbox" name="pedicura-sin" /> Sin esmaltado (10€)</label>
+      <label><input type="checkbox" name="pedicura-con" /> Con esmaltado (+7€)</label>
+    </div>
+
+    <!-- PESTAÑAS Y CEJAS -->
+    <div class="ficha-section">
+      <h3>👁️ Pestañas y Cejas</h3>
+
+      <p><strong>Extensión de pestañas</strong></p>
+      <label><input type="checkbox" name="pestanas" /> Pequeñas (15€)</label>
+      <label><input type="checkbox" name="pestanas" /> Grandes (25€)</label>
+
+      <p><strong>Depilación de cejas (3€)</strong></p>
+      <label><input type="checkbox" name="cejas" /> Depilación</label>
+    </div>
+
+    <!-- PAGO -->
+    <div class="ficha-section">
+      <h3>💳 Forma de pago</h3>
+      <label><input type="checkbox" name="pago" /> Efectivo</label>
+      <label><input type="checkbox" name="pago" /> Bizum</label>
+    </div>
+
+    <!-- OTRA INFO -->
+    <div class="ficha-section">
+      <h3>📝 Otra información</h3>
+      <textarea rows="4" name="info-extra" placeholder="Notas adicionales del cliente..."></textarea>
+    </div>
 
     <button type="submit">Guardar ficha (solo visual)</button>
   </form>
   </section>
+
 
   <section id="contacto">
     <h2>Contacto</h2>
