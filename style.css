@@ -86,3 +86,53 @@ footer {
   color: #7e2d54;
   margin-top: 3rem;
 }
+
+#ficha-cliente {
+  background: #fff5f9;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.ficha-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ficha-form input[type="text"],
+.ficha-form input[type="datetime-local"],
+.ficha-form textarea {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.ficha-form label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.ficha-form h3 {
+  margin-top: 1.5rem;
+  color: #a4396a;
+}
+
+.ficha-form button {
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  background: #a4396a;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.ficha-form button:hover {
+  background: #7e2d54;
+}
