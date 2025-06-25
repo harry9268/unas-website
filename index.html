@@ -45,6 +45,53 @@
     </div>
   </section>
 
+  <section id="ficha-cliente">
+  <h2>Ficha Técnica del Cliente</h2>
+  <form class="ficha-form">
+    <label>Nombre:</label>
+    <input type="text" name="nombre" placeholder="Nombre completo" required />
+
+    <label>Día y hora de cita:</label>
+    <input type="datetime-local" name="fecha" required />
+
+    <h3>🧴 Servicio a realizar</h3>
+
+    <label><input type="checkbox" name="servicio" /> Semipermanente con refuerzo</label>
+    <label><input type="checkbox" name="servicio" /> Semipermanente normal</label>
+    <label><input type="checkbox" name="servicio" /> Uñas de gel esculpidas</label>
+
+    <p>Tamaño:</p>
+    <label><input type="checkbox" name="tamano" /> Grande</label>
+    <label><input type="checkbox" name="tamano" /> Mediano</label>
+    <label><input type="checkbox" name="tamano" /> Pequeño</label>
+
+    <label><input type="checkbox" name="servicio" /> Pedicura Spa SIN esmaltado</label>
+    <label><input type="checkbox" name="servicio" /> Pedicura Spa CON esmaltado</label>
+    <label><input type="checkbox" name="servicio" /> Retiro semipermanente</label>
+    <label><input type="checkbox" name="servicio" /> Retiro gel</label>
+
+    <h3>✨ Decoración</h3>
+    <label><input type="checkbox" name="decoracion" /> Diamantes</label>
+    <label><input type="checkbox" name="decoracion" /> Francesita</label>
+    <label><input type="checkbox" name="decoracion" /> Efectos</label>
+    <label><input type="checkbox" name="decoracion" /> Dibujo</label>
+
+    <h3>👁️ Extensión de pestañas</h3>
+    <label><input type="checkbox" name="pestanas" /> Clásicas</label>
+    <label><input type="checkbox" name="pestanas" /> Volumen ruso</label>
+    <label><input type="checkbox" name="pestanas" /> Extensión diferente incluida</label>
+
+    <h3>💳 Pago</h3>
+    <label><input type="checkbox" name="pago" /> Efectivo</label>
+    <label><input type="checkbox" name="pago" /> Bizum</label>
+
+    <label>Otra información:</label>
+    <textarea rows="4" name="info-extra" placeholder="Notas adicionales del cliente..."></textarea>
+
+    <button type="submit">Guardar ficha (solo visual)</button>
+  </form>
+  </section>
+
   <section id="contacto">
     <h2>Contacto</h2>
     <p>Agenda tu cita por WhatsApp:</p>
