@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nails__by__Vanesa - Servicio de uñas en domicilio particular </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nails__by__Vanesa - Servicio de uñas en domicilio particular</title>
+  <meta name="description" content="Nails by Vanesa — manicura, gel, semipermanente, pedicura, pestañas y cejas en domicilio. Reserva ahora por WhatsApp." />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
@@ -13,125 +14,125 @@
     <p>Servicio de uñas en domicilio particular (con cita previa)</p>
   </header>
 
-  <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+  <!-- Elfsight Instagram Feed -->
   <script src="https://static.elfsight.com/platform/platform.js" async></script>
   <div class="elfsight-app-070972dc-6eaf-478e-9c2c-dea763ca23d5" data-elfsight-app-lazy></div>
 
-  <!--
-  <section id="galeria">
-    <h2>Galería</h2>
-    <div class="imagenes">
-      <img src="unas1.jpeg" alt="Uñas decoradas 1" />
-      <img src="unas2.jpeg" alt="Uñas decoradas 2" />
-      <img src="unas3.jpeg" alt="Uñas decoradas 3" />
-      <img src="unas4.jpeg" alt="Uñas decoradas 4" />
-      <img src="pestana1.jpeg" alt="Pestañas 1" />
-      <img src="pestana2.jpeg" alt="Pestañas 2" />
-      <img src="pestana3.jpeg" alt="Pestañas 3" />
-      <img src="unas5.jpeg" alt="Uñas decoradas 5" />
-    </div>
-  </section> -->
-
   <section id="ficha-cliente">
-  <h2>Ficha Técnica del Cliente</h2>
-  <form class="ficha-form" action="https://formsubmit.co/vanehernandez33387@gmail.com" method="POST">
+    <h2>Ficha Técnica del Cliente</h2>
+    <form class="ficha-form" action="https://formsubmit.co/vanehernandez33387@gmail.com" method="POST" onsubmit="return mostrarConfirmacion()">
 
+      <!-- DATOS DEL CLIENTE -->
+      <div class="ficha-section">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" placeholder="Nombre completo" required />
 
-    <!-- DATOS DEL CLIENTE -->
-    <div class="ficha-section">
-      <label>Nombre:</label>
-      <input type="text" name="nombre" placeholder="Nombre completo" required />
+        <label>Teléfono:</label>
+        <input type="text" name="telefono" placeholder="Número de contacto" required pattern="[0-9]{9}" title="Introduce un número de 9 dígitos"/>
 
-      <label>Día y hora de cita:</label>
-      <input type="datetime-local" name="fecha" required />
-    </div>
+        <label>Día y hora de cita:</label>
+        <input type="datetime-local" name="fecha" id="fecha" required />
+        <small>Horario disponible: 08:00 a 20:00 (excepto sábados)</small>
+      </div>
 
-    <!-- UÑAS -->
-    <div class="ficha-section">
-      <h3>💅 Servicios de Uñas</h3>
+      <!-- UÑAS -->
+      <div class="ficha-section">
+        <h3>💅 Servicios de Uñas</h3>
 
-      <p><strong>Uñas de gel esculpidas</strong></p>
-      <label><input type="checkbox" name="unas-gel" /> Pequeño (15€)</label>
-      <label><input type="checkbox" name="unas-gel" /> Mediano (20€)</label>
-      <label><input type="checkbox" name="unas-gel" /> Grande (25€)</label>
+        <p><strong>Uñas de gel esculpidas</strong></p>
+        <label><input type="radio" name="unas-gel" value="Pequeño (15€)" /> Pequeño (15€)</label>
+        <label><input type="radio" name="unas-gel" value="Mediano (20€)" /> Mediano (20€)</label>
+        <label><input type="radio" name="unas-gel" value="Grande (25€)" /> Grande (25€)</label>
 
-      <p>Extras:</p>
-      <label><input type="checkbox" name="decoracion-gel" /> Decoración (+2€)</label>
-      <label><input type="checkbox" name="dibujo-gel" /> Dibujo o Francesa (+4€)</label>
+        <p>Extras:</p>
+        <label><input type="checkbox" name="decoracion-gel" /> Decoración (+2€)</label>
+        <label><input type="checkbox" name="dibujo-gel" /> Dibujo o Francesa (+4€)</label>
 
-      <p>Adicionales:</p>
-      <label><input type="checkbox" name="relleno-gel" /> Relleno (13€)</label>
-      <label><input type="checkbox" name="retirado-gel" /> Retirado completo (5€)</label>
-      <label><input type="checkbox" name="retirado-diseno-gel" /> Retirado de diseño (3€)</label>
-      <label><input type="checkbox" name="restauracion-gel" /> Restauración uña partida/caída (1€)</label>
-      <label><input type="checkbox" name="limpieza-gel" /> Limpieza de uñas naturales (5€)</label>
+        <p>Adicionales:</p>
+        <label><input type="checkbox" name="relleno-gel" /> Relleno (13€)</label>
+        <label><input type="checkbox" name="retirado-gel" /> Retirado completo (5€)</label>
+        <label><input type="checkbox" name="retirado-diseno-gel" /> Retirado de diseño (3€)</label>
+        <label><input type="checkbox" name="restauracion-gel" /> Restauración uña partida/caída (1€)</label>
+        <label><input type="checkbox" name="limpieza-gel" /> Limpieza de uñas naturales (5€)</label>
 
-      <hr />
+        <hr />
 
-      <p><strong>Semipermanente con refuerzo (12,50€)</strong></p>
-      <label><input type="checkbox" name="semipermanente" /> Servicio</label>
+        <p><strong>Semipermanente con refuerzo (12,50€)</strong></p>
+        <label><input type="checkbox" name="semipermanente" /> Servicio</label>
 
-      <p>Extras:</p>
-      <label><input type="checkbox" name="decoracion-semi" /> Decoración (+2€)</label>
-      <label><input type="checkbox" name="dibujo-semi" /> Dibujo o Francesa (+4€)</label>
+        <p>Extras:</p>
+        <label><input type="checkbox" name="decoracion-semi" /> Decoración (+2€)</label>
+        <label><input type="checkbox" name="dibujo-semi" /> Dibujo o Francesa (+4€)</label>
 
-      <p>Adicionales:</p>
-      <label><input type="checkbox" name="relleno-semi" /> Relleno (8€)</label>
-      <label><input type="checkbox" name="retirado-semi" /> Retirado completo (3€)</label>
-      <label><input type="checkbox" name="retirado-diseno-semi" /> Retirado de diseño (3€)</label>
-      <label><input type="checkbox" name="restauracion-semi" /> Restauración uña partida/caída (1€)</label>
-    </div>
+        <p>Adicionales:</p>
+        <label><input type="checkbox" name="relleno-semi" /> Relleno (8€)</label>
+        <label><input type="checkbox" name="retirado-semi" /> Retirado completo (3€)</label>
+        <label><input type="checkbox" name="retirado-diseno-semi" /> Retirado de diseño (3€)</label>
+        <label><input type="checkbox" name="restauracion-semi" /> Restauración uña partida/caída (1€)</label>
+      </div>
 
-    <!-- PEDICURA -->
-    <div class="ficha-section">
-      <h3>🦶 Pedicura Spa</h3>
-      <label><input type="checkbox" name="pedicura-sin" /> Sin esmaltado (10€)</label>
-      <label><input type="checkbox" name="pedicura-con" /> Con esmaltado (+7€)</label>
-    </div>
+      <!-- PEDICURA -->
+      <div class="ficha-section">
+        <h3>🦶 Pedicura Spa</h3>
+        <label><input type="checkbox" name="pedicura" value="Sin esmaltado (10€)" /> Sin esmaltado (10€)</label>
+        <label><input type="checkbox" name="pedicura" value="Con esmaltado (+7€)" /> Con esmaltado (+7€)</label>
+      </div>
 
-    <!-- PESTAÑAS Y CEJAS -->
-    <div class="ficha-section">
-      <h3>👁️ Pestañas y Cejas</h3>
+      <!-- PESTAÑAS Y CEJAS -->
+      <div class="ficha-section">
+        <h3>👁️ Pestañas y Cejas</h3>
 
-      <p><strong>Extensión de pestañas</strong></p>
-      <label><input type="checkbox" name="pestanas" /> Pequeñas (15€)</label>
-      <label><input type="checkbox" name="pestanas" /> Grandes (25€)</label>
+        <p><strong>Extensión de pestañas</strong></p>
+        <label><input type="checkbox" name="pestanas" value="Pequeñas (15€)" /> Pequeñas (15€)</label>
+        <label><input type="checkbox" name="pestanas" value="Grandes (25€)" /> Grandes (25€)</label>
 
-      <p><strong>Depilación de cejas (3€)</strong></p>
-      <label><input type="checkbox" name="cejas" /> Depilación</label>
-    </div>
+        <p><strong>Depilación de cejas (3€)</strong></p>
+        <label><input type="checkbox" name="cejas" /> Depilación</label>
+      </div>
 
-    <!-- PAGO -->
-    <div class="ficha-section">
-      <h3>💳 Forma de pago</h3>
-      <label><input type="checkbox" name="pago" /> Efectivo</label>
-      <label><input type="checkbox" name="pago" /> Bizum</label>
-    </div>
+      <!-- FORMA DE PAGO -->
+      <div class="ficha-section">
+        <h3>💳 Forma de pago</h3>
+        <label><input type="radio" name="pago" value="Efectivo" required /> Efectivo</label>
+        <label><input type="radio" name="pago" value="Bizum" /> Bizum</label>
+      </div>
 
-    <!-- OTRA INFO -->
-    <div class="ficha-section">
-      <h3>📝 Otra información</h3>
-      <textarea rows="4" name="info-extra" placeholder="Notas adicionales del cliente..."></textarea>
-    </div>
+      <!-- OTRA INFORMACIÓN -->
+      <div class="ficha-section">
+        <h3>📝 Otra información</h3>
+        <textarea rows="4" name="info-extra" placeholder="Notas adicionales del cliente..."></textarea>
+      </div>
 
-    <input type="hidden" name="_next" value="https://harry9268.github.io/unas-website/gracias.html">
-    <input type="hidden" name="_captcha" value="false">
-
-    <button type="submit">Guardar ficha</button>
-  </form>
+      <button type="submit">Guardar ficha</button>
+    </form>
   </section>
 
-  <section id="reseñas">
-  <h2>💬 Opiniones de clientas</h2>
-  <p>Deja tu comentario sobre tu experiencia. ¡Tu opinión es muy importante!</p>
-  <div class="commentbox"></div>
-
-  <!-- Script de CommentBox -->
-  <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
   <script>
-    commentBox('5728465437327360-proj');
+  // Establecer fecha mínima como la actual
+  const fechaInput = document.getElementById("fecha");
+  const ahora = new Date();
+  ahora.setSeconds(0, 0); // Limpiar segundos/milisegundos
+  const isoAhora = ahora.toISOString().slice(0, 16); // Formato "YYYY-MM-DDTHH:mm"
+  fechaInput.min = isoAhora;
+  
+  // Confirmación al enviar el formulario
+  function mostrarConfirmacion() {
+    alert("✅ ¡Tu reserva fue enviada con éxito! Te contactaremos pronto. 😊");
+    return true;
+  }
   </script>
-</section>
+
+  <section id="reseñas">
+    <h2>💬 Opiniones de clientas</h2>
+    <p>Deja tu comentario sobre tu experiencia. ¡Tu opinión es muy importante!</p>
+    <div class="commentbox"></div>
+
+    <!-- Script de CommentBox -->
+    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+    <script>
+      commentBox('5728465437327360-proj');
+    </script>
+  </section>
 
   <section id="contacto">
     <h2>Contacto</h2>
@@ -144,6 +145,8 @@
     <p>&copy; 2025 nails__by__vanesa</p>
   </footer>
 
-  <!-- <script src="script.js"></script> -->
+  <!-- Botón Reservar -->
+  <a href="#ficha-cliente" class="boton-reservar">Reservar cita</a>
 </body>
 </html>
+

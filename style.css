@@ -15,12 +15,6 @@ header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-section {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
 h1 {
   font-family: 'Great Vibes', cursive;
   margin-bottom: 0.3rem;
@@ -36,6 +30,12 @@ h2 {
   border-bottom: 2px solid #a4396a;
   padding-bottom: 0.3rem;
   margin-bottom: 1rem;
+}
+
+section {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
 .imagenes {
@@ -93,7 +93,7 @@ footer {
   margin-top: 3rem;
 }
 
-/* Ficha cliente */
+/* FICHA CLIENTE */
 #ficha-cliente {
   background: #fff5f9;
   padding: 2rem;
@@ -118,11 +118,11 @@ footer {
 .ficha-form input[type="text"],
 .ficha-form input[type="datetime-local"],
 .ficha-form textarea {
+  width: 100%;
   padding: 0.8rem;
+  font-size: 1rem;
   border-radius: 10px;
   border: 1px solid #ccc;
-  font-size: 1rem;
-  width: 100%;
   box-sizing: border-box;
   margin-top: 0.5rem;
 }
@@ -152,7 +152,49 @@ footer {
   border-radius: 12px;
 }
 
-/* Responsive */
+/* RESEÑAS */
+#reseñas {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff5f9;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#reseñas h2 {
+  color: #a4396a;
+  margin-bottom: 0.5rem;
+}
+
+#reseñas p {
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* BOTÓN STICKY */
+.boton-reservar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #a4396a;
+  color: white;
+  padding: 0.9rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-reservar:hover {
+  background-color: #7e2d54;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
 @media screen and (max-width: 600px) {
   #ficha-cliente {
     padding: 1.5rem 1rem;
@@ -170,23 +212,12 @@ footer {
   .ficha-form button {
     font-size: 1rem;
   }
+
+  .boton-reservar {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+    bottom: 15px;
+    right: 15px;
+  }
 }
 
-#reseñas {
-  max-width: 700px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background: #fff5f9;
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-#reseñas h2 {
-  color: #a4396a;
-  margin-bottom: 0.5rem;
-}
-
-#reseñas p {
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-}
