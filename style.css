@@ -7,11 +7,12 @@ body {
 }
 
 header {
-  background-color: #d46ba0;
-  color: white;
-  padding: 2rem;
+  background-color: #ffcce5;
+  color: #4a2c54;
+  padding: 2rem 1rem;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-bottom: 2px solid #f5b5d1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 section {
@@ -20,8 +21,18 @@ section {
   padding: 0 1rem;
 }
 
-h2 {
+h1 {
+  font-family: 'Great Vibes', cursive;
+  margin-bottom: 0.3rem;
+  font-size: 1.8rem;
+  color: #d6336c;
+}
+
+h2, .ficha-form h3 {
   color: #a4396a;
+}
+
+h2 {
   border-bottom: 2px solid #a4396a;
   padding-bottom: 0.3rem;
   margin-bottom: 1rem;
@@ -37,7 +48,7 @@ h2 {
 .imagenes img {
   width: 180px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(164,56,120,0.2);
+  box-shadow: 0 4px 8px rgba(164, 56, 120, 0.2);
   transition: transform 0.3s ease;
   cursor: pointer;
 }
@@ -50,19 +61,27 @@ h2 {
   font-weight: 600;
 }
 
-.btn {
-  display: inline-block;
+.btn,
+.ficha-form button {
   background-color: #a4396a;
   color: white;
-  padding: 0.8rem 1.5rem;
+  border: none;
   border-radius: 25px;
-  text-decoration: none;
   font-weight: bold;
-  margin-top: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.btn:hover,
+.ficha-form button:hover {
   background-color: #7e2d54;
 }
 
@@ -74,13 +93,12 @@ footer {
   margin-top: 3rem;
 }
 
+/* Ficha cliente */
 #ficha-cliente {
   background: #fff5f9;
   padding: 2rem;
   border-radius: 1rem;
-  margin: 2rem auto;
-  max-width: 700px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .ficha-form {
@@ -94,7 +112,7 @@ footer {
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 1.2rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .ficha-form input[type="text"],
@@ -109,6 +127,10 @@ footer {
   margin-top: 0.5rem;
 }
 
+.ficha-form textarea {
+  resize: vertical;
+}
+
 .ficha-form label {
   display: flex;
   align-items: center;
@@ -116,12 +138,7 @@ footer {
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5;
-}
-
-.ficha-form h3 {
-  margin-bottom: 1rem;
-  color: #a4396a;
-  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
 }
 
 .ficha-form p {
@@ -129,27 +146,13 @@ footer {
   font-weight: bold;
 }
 
-.ficha-form textarea {
-  resize: vertical;
-  margin-top: 0.5rem;
-}
-
 .ficha-form button {
   margin-top: 1rem;
   padding: 1rem;
-  background: #a4396a;
-  color: white;
-  border: none;
   border-radius: 12px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1rem;
 }
 
-.ficha-form button:hover {
-  background: #7e2d54;
-}
-
+/* Responsive */
 @media screen and (max-width: 600px) {
   #ficha-cliente {
     padding: 1.5rem 1rem;
@@ -157,15 +160,33 @@ footer {
 
   .ficha-form label {
     font-size: 1rem;
+    line-height: 1.4;
     gap: 0.5rem;
   }
 
-  .ficha-form input,
-  .ficha-form textarea {
-    font-size: 1rem;
-  }
-
+  .ficha-form input[type="text"],
+  .ficha-form input[type="datetime-local"],
+  .ficha-form textarea,
   .ficha-form button {
     font-size: 1rem;
   }
+}
+
+#reseñas {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff5f9;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+#reseñas h2 {
+  color: #a4396a;
+  margin-bottom: 0.5rem;
+}
+
+#reseñas p {
+  font-weight: 500;
+  margin-bottom: 1.5rem;
 }
