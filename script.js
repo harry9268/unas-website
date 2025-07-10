@@ -1,10 +1,14 @@
-// Establecer fecha mínima como la actual
-const fechaInput = document.getElementById("fecha");
-const ahora = new Date();
-ahora.setSeconds(0, 0); // Limpiar segundos/milisegundos
-const isoAhora = ahora.toISOString().slice(0, 16);
-if (fechaInput) fechaInput.min = isoAhora;
+// === SCRIPT LIMPIO ===
 
+// === Fecha mínima ===
+const fechaInput = document.getElementById("fecha");
+if (fechaInput) {
+  const ahora = new Date();
+  ahora.setSeconds(0, 0);
+  fechaInput.min = ahora.toISOString().slice(0, 16);
+}
+
+// === Precios ===
 const precios = {
   'Pequeño (15€)': 15,
   'Mediano (20€)': 20,
@@ -30,41 +34,35 @@ const precios = {
   'Depilación': 3
 };
 
+// === Calcular total ===
 const inputs = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
 const totalDisplay = document.getElementById('precio-total');
 
 function calcularTotal() {
   let total = 0;
-
   inputs.forEach(input => {
     if (input.checked) {
       const valor = input.value || input.name;
       for (let key in precios) {
-        if (valor.includes(key) || input.name.includes(key.toLowerCase().replace(/ /g, '-'))) {
+        if (valor.includes(key)) {
           total += precios[key];
           break;
         }
       }
     }
   });
-
   if (totalDisplay) totalDisplay.textContent = total.toFixed(2) + '€';
 }
 
 inputs.forEach(input => input.addEventListener('change', calcularTotal));
 
-// Confirmación al enviar el formulario
+// === Confirmación de envío ===
 function mostrarConfirmacion() {
   document.getElementById("enviarBtn").style.display = "none";
   document.getElementById("enviando").style.display = "inline";
+
+  // Usa modal en lugar de alert (opcional)
   alert("✅ ¡Tu reserva fue enviada con éxito! Te contactaremos pronto. 😊");
+
   return true;
 }
-
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(reg => console.log("✅ Service Worker registrado:", reg.scope))
-        .catch(err => console.error("❌ Error al registrar Service Worker:", err));
-    });
-  }

@@ -1,11 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato&display=swap');
+/* === Variables === */
+:root {
+  --color-principal: #a94c6f;
+  --color-secundario: #d6336c;
+  --color-fondo: #fff5f9;
+  --color-texto: #4a2f2f;
+  --color-header: #e6b8c9;
+  --color-footer: #f5dce4;
+  --borde-rosado: #d4af7f;
+  --sombra: rgba(0, 0, 0, 0.1);
+}
 
+/* === BASE === */
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
   background: #fffafa;
-  color: #4a2f2f;
+  color: var(--color-texto);
   animation: fadeIn 1s ease;
 }
 
@@ -14,39 +25,44 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* === HEADER === */
 header {
-  background-color: #e6b8c9;
-  color: #4a2f2f;
+  background-color: var(--color-header);
+  color: var(--color-texto);
   padding: 2rem 1rem;
   text-align: center;
-  border-bottom: 2px solid #d4af7f;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid var(--borde-rosado);
+  box-shadow: 0 4px 6px var(--sombra);
 }
 
 h1 {
   font-family: 'Great Vibes', cursive;
   margin-bottom: 0.3rem;
   font-size: 1.8rem;
-  color: #d6336c;
+  color: var(--color-secundario);
 }
 
+/* === TÍTULOS === */
 h2, .ficha-form h3 {
   font-family: 'Playfair Display', serif;
-  color: #a94c6f;
+  color: var(--color-principal);
 }
 
 h2 {
-  border-bottom: 2px solid #a94c6f;
+  border-bottom: 2px solid var(--color-principal);
   padding-bottom: 0.3rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
+/* === SECCIONES === */
 section {
   max-width: 700px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
+/* === GALERÍA === */
 .imagenes {
   display: flex;
   gap: 1rem;
@@ -66,13 +82,10 @@ section {
   transform: scale(1.05);
 }
 
-#contacto p {
-  font-weight: 600;
-}
-
+/* === BOTONES === */
 .btn,
 .ficha-form button {
-  background-color: #a94c6f;
+  background-color: var(--color-principal);
   color: white;
   border: none;
   border-radius: 25px;
@@ -94,17 +107,18 @@ section {
   background-color: #833953;
 }
 
+/* === FOOTER === */
 footer {
   text-align: center;
   padding: 1rem;
-  background: #f5dce4;
-  color: #4a2f2f;
+  background: var(--color-footer);
+  color: var(--color-texto);
   margin-top: 3rem;
 }
 
-/* FICHA CLIENTE */
+/* === FICHA CLIENTE === */
 #ficha-cliente {
-  background: #fff5f9;
+  background: var(--color-fondo);
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -126,67 +140,104 @@ footer {
 
 .ficha-form input[type="text"],
 .ficha-form input[type="datetime-local"],
-.ficha-form textarea {
+.ficha-form textarea,
+#reseñaForm input[type="text"],
+#reseñaForm select,
+#reseñaForm textarea,
+#reseñaForm input[type="file"] {
   width: 100%;
   padding: 0.8rem;
   font-size: 1rem;
   border-radius: 10px;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .ficha-form textarea {
   resize: vertical;
 }
 
-.ficha-form label {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 0.6rem;
+.ficha-form label,
+#reseñaForm label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: var(--color-principal);
 }
 
-.ficha-form p {
-  margin: 0.5rem 0 0;
-  font-weight: bold;
+.ficha-form input:focus,
+.ficha-form textarea:focus,
+#reseñaForm input:focus,
+#reseñaForm textarea:focus {
+  border-color: #a4396a;
+  box-shadow: 0 0 5px var(--color-secundario);
 }
 
-.ficha-form button {
-  margin-top: 1rem;
+/* === TOTAL === */
+#total-estimado {
+  background-color: #fbe9f4;
   padding: 1rem;
   border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* RESEÑAS */
-#reseñas {
+#total-estimado h3 {
+  margin-bottom: 0.5rem;
+  color: #a4396a;
+}
+
+#precio-total {
+  font-size: 1.5rem;
+  color: var(--color-secundario);
+}
+
+/* === RESEÑAS === */
+#reseñas,
+#listaReseñas {
   max-width: 700px;
   margin: 3rem auto;
-  padding: 2rem;
-  background: #fff5f9;
+  background: var(--color-fondo);
   border-radius: 1rem;
+  padding: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-#reseñas h2 {
-  color: #a94c6f;
-  margin-bottom: 0.5rem;
+#mediaEstrellas {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--color-secundario);
+  margin-top: 2rem;
 }
 
-#reseñas p {
-  font-weight: 500;
+.reseña {
   margin-bottom: 1.5rem;
+  animation: fadeIn 0.5s ease;
 }
 
-/* BOTÓN STICKY */
+.reseña h4 {
+  margin: 0 0 0.2rem;
+  color: var(--color-principal);
+}
+
+.reseña p {
+  margin: 0.2rem 0;
+}
+
+.reseña img {
+  margin-top: 0.5rem;
+  border-radius: 10px;
+  max-width: 150px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === BOTÓN FLOTANTE === */
 .boton-reservar {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #a94c6f;
+  background-color: var(--color-principal);
   color: white;
   padding: 0.9rem 1.5rem;
   border-radius: 50px;
@@ -203,7 +254,7 @@ footer {
   transform: scale(1.05);
 }
 
-/* RESPONSIVE */
+/* === RESPONSIVE === */
 @media screen and (max-width: 600px) {
   #ficha-cliente {
     padding: 1.5rem 1rem;
@@ -212,11 +263,9 @@ footer {
   .ficha-form label {
     font-size: 1rem;
     line-height: 1.4;
-    gap: 0.5rem;
   }
 
-  .ficha-form input[type="text"],
-  .ficha-form input[type="datetime-local"],
+  .ficha-form input,
   .ficha-form textarea,
   .ficha-form button {
     font-size: 1rem;
@@ -228,34 +277,4 @@ footer {
     bottom: 15px;
     right: 15px;
   }
-}
-
-#total-estimado {
-  background-color: #fbe9f4;
-  padding: 1rem;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-#total-estimado h3 {
-  margin-bottom: 0.5rem;
-  color: #a4396a;
-}
-
-#precio-total {
-  font-size: 1.5rem;
-  color: #d6336c;
-}
-
-.ficha-form input,
-.ficha-form textarea,
-.ficha-form button {
-  transition: all 0.3s ease;
-}
-
-.ficha-form input:focus,
-.ficha-form textarea:focus {
-  border-color: #a4396a;
-  box-shadow: 0 0 5px #d6336c;
 }

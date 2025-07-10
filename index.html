@@ -5,11 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Vanesa Hernández" />
-  <title>Nails__by__Vanesa</title>
+  <meta name="keywords" content="uñas, manicura, gel, semipermanente, pedicura, pestañas, cejas, reseñas, domicilio, Nails by Vanesa" />
+  <meta name="theme-color" content="#a94c6f" />
+  <title>Manicura y Pedicura a Domicilio | Nails by Vanesa</title>
+  <link rel="canonical" href="http://nailsbyvanesa.top/" />
   <meta name="description" content="Nails by Vanesa — manicura, gel, semipermanente, pedicura, pestañas y cejas en domicilio. Reserva ahora por WhatsApp." />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="icon" href="logo1-removebg-preview.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
 <body>
   <header>
@@ -122,15 +127,33 @@
     </form>
   </section>
 
-  <!-- Opiniones -->
-  <section id="reseñas">
-    <h2>💬 Opiniones de clientas</h2>
-    <p>Deja tu comentario sobre tu experiencia. ¡Tu opinión es muy importante!</p>
-    <div class="commentbox"></div>
-    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
-    <script>
-      commentBox('5728465437327360-proj');
-    </script>
+  <section id="tureseña">
+    <h2>Deja tu reseña</h2>
+    <form id="reseñaForm">
+      <label>Nombre (opcional):</label>
+      <input type="text" id="nombre" placeholder="Tu nombre o anónimo">
+
+      <label>Valoración:</label>
+      <select id="estrellas" required>
+        <option value="">Selecciona</option>
+        <option value="1">⭐️ 1</option>
+        <option value="2">⭐️⭐️ 2</option>
+        <option value="3">⭐️⭐️⭐️ 3</option>
+        <option value="4">⭐️⭐️⭐️⭐️ 4</option>
+        <option value="5">⭐️⭐️⭐️⭐️⭐️ 5</option>
+      </select>
+
+      <label>Comentario:</label>
+      <textarea id="comentario" rows="4" required></textarea>
+
+      <label>Subir foto (opcional):</label>
+      <input type="file" id="foto" accept="image/*">
+
+      <button type="submit">Enviar reseña</button>
+    </form>
+
+    <h3 id="mediaEstrellas">⭐️ Media: -</h3>
+    <div id="listaReseñas"></div>
   </section>
 
   <!-- Contacto -->
@@ -149,6 +172,6 @@
   <a href="#ficha-cliente" class="boton-reservar">Reservar cita</a>
 
   <!-- Script JavaScript separado -->
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
