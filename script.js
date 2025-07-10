@@ -27,8 +27,8 @@ const precios = {
   'Retirado semi (3€)': 3,
   'Retirado diseño semi (3€)': 3,
   'Restauración semi (1€)': 1,
-  'Sin esmaltado (10€)': 10,
-  'Con esmaltado (17€)': 17,
+  'Pedicura base (10€)': 10,
+  'Esmaltado pedicura (+7€)': 7,
   'Pequeñas (15€)': 15,
   'Grandes (25€)': 25,
   'Depilación': 3
