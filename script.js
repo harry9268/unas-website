@@ -56,13 +56,33 @@ function calcularTotal() {
 
 inputs.forEach(input => input.addEventListener('change', calcularTotal));
 
-// === Confirmación de envío ===
-function mostrarConfirmacion() {
-  document.getElementById("enviarBtn").style.display = "none";
-  document.getElementById("enviando").style.display = "inline";
 
-  // Usa modal en lugar de alert (opcional)
-  alert("✅ ¡Tu reserva fue enviada con éxito! Te contactaremos pronto. 😊");
+function enviarPorWhatsApp() {
+  const nombre = document.querySelector('input[name="nombre"]').value;
+  const telefono = document.querySelector('input[name="telefono"]').value;
+  const fecha = document.querySelector('input[name="fecha"]').value;
+  const extrasSeleccionados = [];
 
-  return true;
+  document.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked').forEach(el => {
+    extrasSeleccionados.push(el.value);
+  });
+
+  const metodoPago = document.querySelector('input[name="pago"]:checked')?.value || '';
+  const notas = document.querySelector('textarea[name="info-extra"]').value;
+
+  let mensaje = `*Ficha Técnica del Cliente*%0A`;
+  mensaje += `*Nombre:* ${nombre}%0A`;
+  mensaje += `*Teléfono:* ${telefono}%0A`;
+  mensaje += `*Cita:* ${fecha}%0A`;
+  mensaje += `*Servicios seleccionados:* ${extrasSeleccionados.join(', ') || 'Ninguno'}%0A`;
+  mensaje += `*Pago:* ${metodoPago}%0A`;
+  mensaje += `*Notas:* ${notas || 'Ninguna'}%0A`;
+
+  const numeroWhatsApp = '34666852779'; // Asegúrate de que esté en formato internacional sin signos +
+  const url = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+
+  window.open(url, '_blank');
+
+  return false; // Evita el envío del formulario normal
 }
+

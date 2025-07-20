@@ -30,7 +30,7 @@
   <!-- Ficha técnica del cliente -->
   <section id="ficha-cliente">
     <h2>Ficha Técnica del Cliente</h2>
-    <form class="ficha-form" action="https://formsubmit.co/vanehernandez33387@gmail.com" method="POST" onsubmit="return mostrarConfirmacion()">
+    <form class="ficha-form" onsubmit="return enviarPorWhatsApp()">
 
       <!-- DATOS DEL CLIENTE -->
       <div class="ficha-section">
@@ -120,10 +120,11 @@
         <p><strong id="precio-total">0€</strong></p>
       </div>
       
-      <input type="hidden" name="_captcha" value="false">
+      <button type="submit" id="enviarBtn" style="display: flex; align-items: center; gap: 8px;">
+        <img src="https://img.icons8.com/color/24/whatsapp--v1.png" alt="WhatsApp" />
+        Enviar por WhatsApp
+      </button>
 
-      <button type="submit" id="enviarBtn">Guardar ficha</button>
-      <span id="enviando" style="display:none; margin-top: 0.5rem;">⏳ Enviando...</span>
     
     </form>
   </section>
